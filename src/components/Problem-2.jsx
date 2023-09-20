@@ -4,6 +4,14 @@ import { useEffect, useState } from "react";
 const Problem2 = () => {
     const [problem2Data, setProblem2Data] = useState([])
     useEffect(() => {
+
+        /*
+        =================================================
+        Dear Examiner,
+
+        i Can not find API in your Given URL
+        =================================================
+        */
         fetch('https://contact.mediusware.com/api-doc/?format=openapi')
             .then(res => res.json())
             .then(data => setProblem2Data(data))
@@ -22,7 +30,7 @@ const Problem2 = () => {
             </div>
             <dialog id="my_modal_1" className="modal">
                 <div className="modal-box">
-                    <h3 className="text-lg font-bold">Hello!</h3>
+                    <h3 className="text-lg font-bold">All COntracts</h3>
                     <p className="py-4">Modal One</p>
                     <div className="flex justify-center gap-6 ">
                         <button className="btn bg-[#46139f] text-white hover:text-black">All Contracts</button>
@@ -36,10 +44,10 @@ const Problem2 = () => {
                     </div>
                 </div>
             </dialog>
-            
+
             <dialog id="my_modal_2" className="modal">
                 <div className="modal-box">
-                    <h3 className="text-lg font-bold">Hello!</h3>
+                    <h3 className="text-lg font-bold">US Contracts</h3>
                     <p className="py-4">Modal Two</p>
                     <div className="flex justify-center gap-6 ">
                         <button className="btn bg-[#46139f] text-white hover:text-black">All Contracts</button>
@@ -50,6 +58,10 @@ const Problem2 = () => {
                             {/* if there is a button in form, it will close the modal */}
                             <button className="bg-transparent border-[#46139f] border-2 btn">Close</button>
                         </form>
+                    </div>
+                    <div className="flex items-center justify-end gap-6 mt-6">
+                        <p>Please Check it</p>
+                        <input className="w-[20px] h-[20px]" type="checkbox" name="" id="" />
                     </div>
                 </div>
             </dialog>
